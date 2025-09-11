@@ -3,7 +3,7 @@ layout: default
 title: Bruno Dantas
 ---
 
-# Welcome to My Blog
+# Welcome to My Website
 
 I'm Bruno Dantas, a software developer interested in Python and Functional Programming.
 
