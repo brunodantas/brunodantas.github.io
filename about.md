@@ -1,12 +1,14 @@
 ---
-layout: default
-title: About
+layout: page
+title: "About"
 permalink: /about/
 ---
 
 # About Bruno Dantas
 
-I'm a software developer interested in Python and Functional Programming.
+I'm a software engineer interested in Python and Functional Programming.
+
+I created this website site to share what I've learned.
 
 ## Connect
 

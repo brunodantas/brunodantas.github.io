@@ -1,0 +1,25 @@
+---
+layout: default
+title: "Page Not Found"
+description: "The page you're looking for doesn't exist. Browse our latest blog posts about Django and Python development."
+permalink: /404.html
+sitemap: false
+---
+
+# Page Not Found
+
+Sorry, the page you're looking for doesn't exist.
+
+## Recent Posts
+
+{% for post in site.posts limit:5 %}
+- [{{ post.title }}]({{ post.url }}) - {{ post.date | date: "%B %d, %Y" }}
+{% endfor %}
+
+## Navigation
+
+- [Home](/)
+- [Blog](/blog/)
+- [About](/about/)
+
+[← Back to Home](/)

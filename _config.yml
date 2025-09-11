@@ -2,11 +2,40 @@ theme: minima
 plugins:
 - jekyll-feed
 - jekyll-sitemap
+- jekyll-seo-tag
 
 # Site settings
-title: Bruno Dantas
-description: Software Engineering
-author: Bruno Dantas
+title: Bruno Dantas - Software Engineer
+description: >- # this means to ignore newlines until "baseurl:"
+  Software engineering blog focusing on Python.
+author: 
+  name: Bruno Dantas
+  email: 4422988+brunodantas@users.noreply.github.com
+url: "https://brunodantas.github.io" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+github_username: brunodantas
+linkedin_username: brunodantasm
+
+# SEO settings
+lang: en_US
+timezone: America/Sao_Paulo # Change to your timezone
+google_analytics: # Add your Google Analytics ID here when you get one
+google_site_verification: googlec39f095078cc50f8.html # Add your Google Search Console verification code
+
+# Social media and Open Graph defaults
+social:
+  name: Bruno Dantas
+  links:
+    - https://github.com/brunodantas
+    - https://linkedin.com/in/brunodantasm
+
+# Logo for SEO
+logo: /assets/images/konario.png # Add a logo if you have one
+
+# Site verification (add these when you get them)
+webmaster_verifications:
+  google: # Add Google Search Console verification
+  bing: # Add Bing Webmaster verification
 
 # Build settings
 markdown: kramdown

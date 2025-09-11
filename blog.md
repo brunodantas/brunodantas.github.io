@@ -1,10 +1,9 @@
 ---
 layout: default
-title: Posts
+title: "Posts"
 permalink: /blog/
 ---
 
-# Posts
 
 {% for post in site.posts %}
 ## [{{ post.title }}]({{ post.url }})

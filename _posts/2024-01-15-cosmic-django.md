@@ -1,16 +1,21 @@
 ---
 layout: post
-title: "Cosmic Django"
+title: "Cosmic Django: Applying Architecture Patterns with Django"
+description: "Let's learn how to apply Cosmic Python's architecture patterns to Django development while maintaining the framework's batteries-included philosophy. Explore domain modeling, service layers, and clean architecture in Django."
 date: 2024-01-15
 categories: [django, python, architecture]
-tags: [cosmic-python, domain-driven-design, tdd, django]
+tags: [cosmic-python, domain-driven-design, tdd, django, clean-architecture, software-engineering]
+author: Bruno Dantas
+image: /assets/images/cosmic.png
+seo:
+  type: BlogPosting
 ---
 
 [Cosmic Python](https://www.cosmicpython.com/) (aka Architecture Patterns With Python) is a very interesting book with interesting concepts. But as a Django fan, I kept thinking how all that would apply to Django. So I implemented the example project while reflecting on best practices and referencing other sources.
 
 If you look at their Django implementation in Appedix D, the authors do something weird with the project structure. It's like they think Django is an ORM as opposed to a web framework with batteries included... They totally threw the batteries away and did their own thing, and that's the opposite of what I want to do.
 
-Let me know what you think at https://github.com/brunodantas/cosmic-django/issues
+Let me know what you think @ the [project repo](https://github.com/brunodantas/cosmic-django/issues).
 
 ## Starting out: TDD
 
