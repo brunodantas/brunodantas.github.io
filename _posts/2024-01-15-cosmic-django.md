@@ -6,7 +6,7 @@ categories: [django, python, architecture]
 tags: [cosmic-python, domain-driven-design, tdd, django]
 ---
 
-Cosmic Python is a very interesting book with interesting concepts. But as a Django fan, I kept thinking how all that would apply to Django. So I implemented the example project while reflecting on best practices and referencing other sources.
+[Cosmic Python](https://www.cosmicpython.com/) (aka Architecture Patterns With Python) is a very interesting book with interesting concepts. But as a Django fan, I kept thinking how all that would apply to Django. So I implemented the example project while reflecting on best practices and referencing other sources.
 
 If you look at their Django implementation in Appedix D, the authors do something weird with the project structure. It's like they think Django is an ORM as opposed to a web framework with batteries included... They totally threw the batteries away and did their own thing, and that's the opposite of what I want to do.
 
