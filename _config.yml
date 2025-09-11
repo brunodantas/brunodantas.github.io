@@ -1,6 +1,7 @@
-remote_theme: pages-themes/modernist@v0.2.0
+theme: minima
 plugins:
-- jekyll-remote-theme
+- jekyll-feed
+- jekyll-sitemap
 
 # Site settings
 title: Bruno Dantas
@@ -13,8 +14,15 @@ markdown: kramdown
 highlighter: rouge
 permalink: /blog/:year/:month/:day/:title/
 
-# Show downloads (set to false for personal site)
-show_downloads: false
+# Minima theme settings
+minima:
+  skin: auto
+  social_links:
+    github: brunodantas
+    linkedin: brunodantasm
+
+# Show excerpts on home page
+show_excerpts: true
 
 # Collections
 collections:
@@ -28,6 +36,12 @@ paginate_path: "/blog/page:num/"
 
 # Defaults
 defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      show_excerpts: true
   - scope:
       path: ""
     values:
