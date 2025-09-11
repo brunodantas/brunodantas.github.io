@@ -1,0 +1,30 @@
+---
+---
+
+@import "jekyll-theme-modernist";
+
+/* Custom styles for blog posts */
+.post-meta {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+.post-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.post-list li {
+  margin-bottom: 1em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1em;
+}
+
+.post-title {
+  margin-bottom: 0.5em;
+}
+
+.post-date {
+  font-weight: bold;
+}
