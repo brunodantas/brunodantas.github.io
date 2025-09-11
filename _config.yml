@@ -5,12 +5,9 @@ plugins:
 - jekyll-seo-tag
 
 # Site settings
-title: Bruno Dantas - Software Engineer
+title: brunodantas
 description: >- # this means to ignore newlines until "baseurl:"
-  Software engineering blog focusing on Python.
-author: 
-  name: Bruno Dantas
-  email: 4422988+brunodantas@users.noreply.github.com
+  Software engineering and related things.
 url: "https://brunodantas.github.io" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog
 github_username: brunodantas

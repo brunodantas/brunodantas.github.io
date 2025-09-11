@@ -1,6 +1,5 @@
 ---
 layout: home
-title: "brunodantas"
 ---
 
 I'm Bruno, a software developer interested in Python and Functional Programming.
