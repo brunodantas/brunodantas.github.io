@@ -11,7 +11,7 @@ I created this website site to share what I've learned.
 ## Connect
 
 - GitHub: [brunodantas](https://github.com/brunodantas)
-- LinkedIn: [linkedin.com/in/brunodantasm](https://linkedin.com/in/brunodantasm)
+- LinkedIn: [brunodantasm](https://linkedin.com/in/brunodantasm)
 
 ---
 
