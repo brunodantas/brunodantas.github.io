@@ -49,6 +49,11 @@ minima:
     github: brunodantas
     linkedin: brunodantasm
 
+# Custom navigation - only show these pages in header
+header_pages:
+  - blog.md
+  - about.md
+
 # Show excerpts on home page
 show_excerpts: true
 
