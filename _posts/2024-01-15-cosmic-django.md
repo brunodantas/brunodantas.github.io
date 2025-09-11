@@ -1,10 +1,14 @@
 ---
-layout: post
+layout: default
 title: "Cosmic Django"
 date: 2024-01-15
 categories: [django, python, architecture]
 tags: [cosmic-python, domain-driven-design, tdd, django]
 ---
+
+# Cosmic Django
+
+*Published on {{ page.date | date: "%B %d, %Y" }}*
 
 Cosmic Python is a very interesting book with interesting concepts. But as a Django fan, I kept thinking how all that would apply to Django. So I implemented the example project while reflecting on best practices and referencing other sources.
 
