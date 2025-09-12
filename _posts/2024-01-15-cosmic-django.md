@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cosmic Django: Applying Architecture Patterns with Django"
+title: "Cosmic Django"
 description: "Let's learn how to apply Cosmic Python's architecture patterns to Django development while maintaining the framework's batteries-included philosophy. Explore domain modeling, service layers, and clean architecture in Django."
 date: 2024-01-15
 categories: [django, python, architecture]
@@ -15,6 +15,8 @@ seo:
 
 If you look at their Django implementation in Appedix D, the authors do something weird with the project structure. It's like they think Django is an ORM as opposed to a web framework with batteries included... They totally threw the batteries away and did their own thing, and that's the opposite of what I want to do.
 
+In this post, we'll go over each of the book's architecture patterns and discuss their applicability to Django projects. I'll also reimplement the example project using Django and all the patterns I decide on using.
+
 Let me know what you think @ the [project repo](https://github.com/brunodantas/cosmic-django/issues).
 
 ## Starting out: TDD
@@ -25,7 +27,7 @@ Surprisingly, Cosmic Python is a sort of sequel to another book about Test Drive
 
 I decided to start with the final version of the test definitions because I don't want to do all the architecture/requirement changes that they do along the book.
 
-I won't get into detail on them at first, but if you like tests, you can see their final form in the [repo](https://github.com/brunodantas/cosmic-django).
+I won't get into detail on them, but if you like tests, you can see their final form in the [repo](https://github.com/brunodantas/cosmic-django).
 
 One of my goals with this project is making all tests pass. This seems challenging, but at least then I could say my project works.
 
@@ -92,13 +94,13 @@ This sounds like Django's [`transaction.atomic`](https://docs.djangoproject.com/
 
 For the sake of separation of concerns, let's put all our UoWs in our [Custom Managers](https://docs.djangoproject.com/en/5.2/topics/db/managers/#custom-managers).
 
-## Aggregates
+## Aggregate Pattern
 
 > An AGGREGATE is a cluster of associated objects that we treat as a unit for the purpose of data changes.
 
 This chapter talks about managing business logic invariants by containing them in a new class... I don't like this very much.
 
-Personally, I'd rather apply [Design by Contract](https://en.wikipedia.org/wiki/Design_by_contract) for that. Our contracts can check for preconditions and invariants. Then we can use something like [deal](https://github.com/life4/deal), or if you're into Functional Programming, [ensures](https://github.com/brunodantas/ensures). 
+Personally, I'd rather apply [Design by Contract](https://en.wikipedia.org/wiki/Design_by_contract) for that. Our contracts can check for preconditions and invariants. Then we can use something like [`deal`](https://github.com/life4/deal), or if you're into Functional Programming, [`ensures`](https://github.com/brunodantas/ensures). I'll be using `ensures`.
 
 ## Events and the Message Bus
 
