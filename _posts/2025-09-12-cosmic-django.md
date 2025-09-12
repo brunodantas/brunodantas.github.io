@@ -2,7 +2,7 @@
 layout: post
 title: "Cosmic Django"
 description: "Let's learn how to apply Cosmic Python's architecture patterns to Django development while maintaining the framework's batteries-included philosophy. Explore domain modeling, service layers, and clean architecture in Django."
-date: 2024-01-15
+date: 2025-09-12
 categories: [django, python, architecture]
 tags: [cosmic-python, domain-driven-design, tdd, django, clean-architecture, software-engineering]
 author: brunodantas
