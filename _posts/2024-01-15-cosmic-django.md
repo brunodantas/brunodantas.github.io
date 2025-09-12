@@ -5,7 +5,7 @@ description: "Let's learn how to apply Cosmic Python's architecture patterns to 
 date: 2024-01-15
 categories: [django, python, architecture]
 tags: [cosmic-python, domain-driven-design, tdd, django, clean-architecture, software-engineering]
-author: Bruno Dantas
+author: brunodantas
 image: /assets/images/cosmic.png
 seo:
   type: BlogPosting

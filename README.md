@@ -1,6 +1,6 @@
-# Bruno Dantas - Software Engineer
+# brunodantas
 
-Personal blog about what I've learned related to software development and related things.
+Posts about what I've learned in software development and related things.
 
 ## 🔗 Live Site
 Visit: [brunodantas.github.io](https://brunodantas.github.io)
