@@ -17,7 +17,7 @@ If you look at their Django implementation in Appedix D, the authors do somethin
 
 In this post, we'll go over each of the book's architecture patterns and discuss their applicability to Django projects. Then I'll describe my [Cosmic Django](https://github.com/brunodantas/cosmic-django) project and all the patterns I decided on using.
 
-Let me know what you think @ the [project repo](https://github.com/brunodantas/cosmic-django/issues).
+Let me know what you think at the [project repo](https://github.com/brunodantas/cosmic-django/issues).
 
 ## Starting out: TDD
 
@@ -84,7 +84,7 @@ This pattern is another interesting separation of concerns. From what I understa
 
 If only this pattern wasn't [*considered harmful*](https://www.b-list.org/weblog/2020/mar/16/no-service/) by Django people though...
 
-But it's ok, because the service layer fits well with the choice we made back in Domain Modeling. This translates to a `service` module in our `core` app, which is endorsed by Two Scoops. And I'm sorry to disappoint my forefathers.
+But it's ok, because the service layer fits well with the choice we made back in Domain Modeling. This translates to a `service` module in our `core` app, which is endorsed by Two Scoops. And I'm sorry for disappointing my forefathers.
 
 ## Unit of Work
 
@@ -150,3 +150,55 @@ The idea of View models is awesome, but the specific approach is gonna depend a 
 > Dependency injection (DI) is regarded with suspicion in the Python world. And we've managed just fine without it so far in the example code for this book!
 
 This is a good concept, and I think we can go even further by doing a kind of [Metaprogramming](https://en.wikipedia.org/wiki/Metaprogramming) with [Django Settings](https://docs.djangoproject.com/en/5.2/ref/settings/), keeping multiple settings files as suggested by Two Scoops, and selecting the settings module in our `pytest.ini`. This seem more powerful than the suggested bootstrap script.
+
+
+## Implementation
+
+The implementation didn't deviate much from the above. TDD was a nice enough approach, which makes our requirements concrete and executable. That's probably more relevant for big projects though.
+
+See the [repo](https://github.com/brunodantas/cosmic-django) for more implementation details.
+
+Our project has the following dependency graph, generated via [pydeps](https://pydeps.readthedocs.io/en/latest/#).
+
+![Dependency graph](https://raw.githubusercontent.com/brunodantas/cosmic-django/refs/heads/main/dependency_graph.svg)
+
+### `allocation.models`
+
+Our models are our thin domain models / active records that are accessed by `core.logic` (for business logic), and `core.service` (for queries etc).
+
+### `ensures`
+
+This is our Design by Contract library, which is replacing the Aggregate pattern in a way.
+
+### `allocation.signals`
+
+This is for the Event definitions.
+
+### `core.logic`
+
+Business logic goes here.
+
+### `core.service`
+
+Service Layer, with queries and event handlers etc.
+
+### Missing/decoupled things
+
+The missing modules from the graph are:
+
+- Repository: we're using Active Record instead.
+- Unit of Work: from my understanding, this can be replaced entirely by `atomic` after all.
+- Aggregate: we're using Design by Contract instead.
+- Message Bus: Django Signals handle them for us, and I opted for not showing Django dependencies in the graph above.
+- Command Pattern: implemented with Signals as well.
+- Microservices: we're using a Monolith. Which doesn't have to be a bad thing.
+- View Model: I believe they didn't appear in the graph because they're decoupled by using Django Signals only. This happens with the entire API, not just the view models.
+- Dependency Injection: we have two different Settings files, which Django handles.
+
+
+## Conclusion
+
+In this post, we went through all the architecture patterns from the Cosmic Python book and how they can be applied to Django. We discussed their applicability, especially when they clashed with Django best practices, and made a few compromises where needed. We also found that some of the patterns were part of the framework already.
+
+In the end, I believe we have reached an implementation that is both a middle ground between the book's patterns and Django best practices, and a better use of Django when compared to the book's Django implementation from Appedix D.
+
