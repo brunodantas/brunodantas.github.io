@@ -11,11 +11,11 @@ seo:
   type: BlogPosting
 ---
 
-[Cosmic Python](https://www.cosmicpython.com/) (aka Architecture Patterns With Python) is a very interesting book with great concepts. Though reading it a Django fan, I kept thinking how all that would apply to Django. So I implemented the example project while reflecting on best practices and referencing other sources.
+[Cosmic Python](https://www.cosmicpython.com/) (aka Architecture Patterns With Python) is a very interesting book with great concepts. Though reading it as a Django fan, I kept thinking how all that would apply to Django. So [I implemented](https://github.com/brunodantas/cosmic-django) the example project while reflecting on best practices and referencing other sources.
 
 If you look at their Django implementation in Appedix D, the authors do something weird with the project structure. It's like they think Django is an ORM as opposed to a web framework with batteries included... They totally threw the batteries away and did their own thing, and that's the opposite of what I want to do.
 
-In this post, we'll go over each of the book's architecture patterns and discuss their applicability to Django projects. I'll also reimplement the example project using Django and all the patterns I decide on using.
+In this post, we'll go over each of the book's architecture patterns and discuss their applicability to Django projects. Then I'll describe my [Cosmic Django](https://github.com/brunodantas/cosmic-django) project and all the patterns I decided on using.
 
 Let me know what you think @ the [project repo](https://github.com/brunodantas/cosmic-django/issues).
 
