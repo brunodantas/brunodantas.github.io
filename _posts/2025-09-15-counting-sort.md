@@ -11,7 +11,7 @@ seo:
   type: BlogPosting
 ---
 
-When studying the field of [Sorting Algorithms](https://en.wikipedia.org/wiki/Sorting_algorithm), many Computer Science courses stop at some very famous ones, like Quicksort and Merge Sort. They are very efficient, performing at $O(n log n)$ time, and can be applied to any data that can be compared. In fact, real-world sorting implementations, like CPython's [Timsort](https://en.wikipedia.org/wiki/Timsort) and [Powersort](https://en.wikipedia.org/wiki/Powersort) are derived from those simpler ones, while adding some pretty advanced techniques.
+When studying the field of [Sorting Algorithms](https://en.wikipedia.org/wiki/Sorting_algorithm), many Computer Science courses stop at some very famous ones, like Quicksort and Merge Sort. They are very efficient, performing at O(n log n) time, and can be applied to any data that can be compared. In fact, real-world sorting implementations, like CPython's [Timsort](https://en.wikipedia.org/wiki/Timsort) and [Powersort](https://en.wikipedia.org/wiki/Powersort) are derived from those simpler ones, while adding some pretty advanced techniques.
 
 Most people stop there, for many reasons. Perhaps lack of curiosity. Perhaps we just had to move on after seeing too many algorithms that achieve the same thing. Perhaps people are convinced those are the best we can achieve. After all, if there was a faster algorithm, it would be well known, right?
 
@@ -24,14 +24,14 @@ Today we are going to focus on [Counting Sort](https://en.wikipedia.org/wiki/Cou
 If you studied Computer Science, you may remember that there are some algorithms that trade memory-efficiency for time-efficiency (see: [memoization](https://en.wikipedia.org/wiki/Memoization)). That's similar to what Distribution Sorts do. For instance, Counting Sort uses a big array to store every element, in addition to an output array, in case you're not sorting in-place.
 
 The catch is: Counting Sort and others only work for **arrays of non-negative integers**. So, if you can map your objects clealy into non-negative integers beforehand, it should work. Given that restriction the complexity of Counting Sort is as follows.
-- Time: $O(n + k)$
-- Space: $O(n + k)$
+- Time: O(n + k)
+- Space: O(n + k)
 
-Where $n$ is the length of the array, and $k$ is the maximum element of the array.
+Where n is the length of the array, and k is the maximum element of the array.
 
 ## Counting Sort
 
-The basic idea is that you allocate a big array with size $k$ (or list in our case) where each index $i$ represents the values from the input array, and each stored value $v$ represents the number of occurences of each element. After we populate this array, we just need to iterate it and populate our output array with each element $i$ times its occurrences $v$.
+The basic idea is that you allocate a big array with size k (or list in our case) where each index i represents the values from the input array, and each stored value v represents the number of occurences of each element. After we populate this array, we just need to iterate it and populate our output array with each element i times its occurrences v.
 
 My implementation of Counting Sort is defined as follows.
 
@@ -72,26 +72,25 @@ Let's go through this algorithm and analyze its performance in various situation
 
 ## Analysis
 
-The memory usage of this program can be determined from verifying that the `occurs` list has size $v$ where $v$ is the largest element in the input, and that the output list has size `n`, size it has the same size as the input.
+The memory usage of this program can be determined from verifying that the `occurs` list has size v where v is the largest element in the input, and that the output list has size `n`, size it has the same size as the input.
 
 The time complexity isn't as straightforward to analyze because we're using Python's efficient list multiplication. Let's assume that appending occurrences in the last loop takes constant time.
 
-We can see that computing the max value is an iteration over $n$ elements, while counting occurrences takes $k$ iterations, and building the output takes $k$ iterations as well, resulting in $2k + n$.
+We can see that computing the max value is an iteration over n elements, while counting occurrences takes k iterations, and building the output takes k iterations as well, resulting in 2k + n.
 
 As we can see, this algorithm is insensitive to factors such the sorted input, likely because it doesn't make any comparison.
 
-So, the best case for it is where the largest value is not too high, i.e. the lower $k$ is, the more this algorithm approximates linear time/space.
+So, the best case for it is where the largest value is not too high, i.e. the lower k is, the more this algorithm approximates linear time/space.
 
-The worst case is when $k$ is too high, particularly when it is much bigger than the other elements.
+The worst case is when k is too high, particularly when it is much bigger than the other elements.
 
 ## Benchmark
 
-I decided to compare our Python Counting Sort (CS) code to CPython's implementation of Powersort from the `sorted` in Python 3.13. The experiments consist of 10 executions of each function given lists with random non-negative integers. I have varied the list size from 64 to 16,777,216, and range of numbers ($k$) from 100 to 100,000.
+I decided to compare our Python Counting Sort (CS) code to CPython's implementation of Powersort from the `sorted` in Python 3.13. The experiments consist of 10 executions of each function given lists with random non-negative integers. I have varied the list size from 64 to 16,777,216, and range of numbers (k) from 100 to 100,000.
 
 It is expected for CS to underperform, since our code is implemented using Python code, while Python's builtin functions are implemented in C. However, we found some surprising results.
 
 <pre style="overflow-y: scroll; max-height: 200px;">
-```
 Very Small range (0-100)
 --------------------------------------------------
 Size     CountingSort    sorted()        CS_Mem     Sort_Mem   Speedup    Winner
@@ -187,8 +186,6 @@ Size     CountingSort    sorted()        CS_Mem     Sort_Mem   Speedup    Winner
 4194304  247.6ms         645.2ms         36.6MB     48.0MB     2.61x      countingsort
 8388608  403.5ms         1.39s           74.1MB     96.0MB     3.43x      countingsort
 16777216 693.8ms         2.93s           145.2MB    192.0MB    4.22x      countingsort
-
-```
 </pre>
 
 As you can see, CS had much lower execution times than `sorted` in some very specific cases, while also using less memory with inputs of size 1000 or less. These results suggest that there's a certain ratio of size per range where CS is particularly efficient. Unfortunately though, this means that the use cases for CS should be even more limited. For this particular implementation, at least.
@@ -229,10 +226,9 @@ Now we can use the same benchmark to test it against Python's Powersort.
 
 ## Rust Benchmark
 
-This time we went with different range increments, because the results were the same starting at $k = 500$.
+This time we went with different range increments, because the results were the same starting at k = 500.
 
 <pre style="overflow-y: scroll; max-height: 200px;">
-```
 Very Small range (0-100)
 --------------------------------------------------
 Size     CountingSort    sorted()        CS_Mem     Sort_Mem   Speedup    Winner
@@ -328,7 +324,6 @@ Size     CountingSort    sorted()        CS_Mem     Sort_Mem   Speedup    Winner
 4194304  510.0ms         384.3ms         72.2MB     48.0MB     0.75x      sorted()
 8388608  1.02s           777.0ms         144.5MB    95.9MB     0.76x      sorted()
 16777216 2.14s           1.56s           288.8MB    191.8MB    0.73x      sorted()
-```
 </pre>
 
 As we can see, Rust CS dominated the results up to range 300, reaching close to 6.2X Speedup. At higher ranges, this version of CS lose performance due to memory access overhead, perhaps. Interestingly, its the memory usage is comparable to `sorted`'s, but growing faster as the range of elements grow.
