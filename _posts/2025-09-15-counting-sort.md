@@ -330,4 +330,4 @@ As we can see, Rust CS dominated the results up to range 300, reaching close to 
 
 # Conclusion
 
-In this post, we have seen an analysis and benchmark of Counting Sort. I hope it was informative. My hope was that we could leave this with clearer use cases for this algorithm, what remains is the conventional wisdom of using it when your maximum element is not large.
+In this post, we have seen an analysis and benchmark of Counting Sort. I hope it was informative. My hope was that we could leave this with clearer use cases for this algorithm, but what remains is the conventional wisdom of using it when your maximum element is not large.
