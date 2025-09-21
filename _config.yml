@@ -45,6 +45,7 @@ minima:
   social_links:
     github: brunodantas
     linkedin: brunodantasm
+  google_analytics: G-6PWGXCY41R
 
 # Custom navigation - only show these pages in header
 header_pages:
