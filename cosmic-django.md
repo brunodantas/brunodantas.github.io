@@ -1,5 +1,6 @@
 # cosmic-django
 
+
 ## Book
 
 After writing this, I was inspired to further explore the applicability of other architecture patterns to Django.
