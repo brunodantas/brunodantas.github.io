@@ -17,7 +17,7 @@ After writing this, I was inspired to further explore the applicability of other
 
 That ended up becoming my first book!
 
-**Django Architecture Patterns** is available at: https://a.co/d/baRzank
+**Django Architecture Patterns** is available at: [https://a.co/d/baRzank](https://a.co/d/baRzank)
 
 
 ## Intro
