@@ -11,6 +11,15 @@ seo:
   type: BlogPosting
 ---
 
+## Book
+
+After writing this, I was inspired to further explore the applicability of other architecture patterns to Django.
+
+That ended up becoming my first book!
+
+
+## Intro
+
 [Cosmic Python](https://www.cosmicpython.com/) (aka Architecture Patterns With Python) is a very interesting book with great concepts. Though reading it as a Django fan, I kept thinking how all that would apply to Django. So [I implemented](https://github.com/brunodantas/cosmic-django) the example project while reflecting on best practices and referencing other sources.
 
 If you look at their Django implementation in Appedix D, the authors do something weird with the project structure. It's like they think Django is an ORM as opposed to a web framework with batteries included... They totally threw the batteries away and did their own thing, and that's the opposite of what I want to do.
