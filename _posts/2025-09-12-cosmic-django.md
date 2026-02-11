@@ -11,16 +11,8 @@ seo:
   type: BlogPosting
 ---
 
-## Book
+After writing this, I was inspired to further explore the applicability of other architecture patterns to Django. That ended up becoming my first book! **Django Architecture Patterns** is available at: [https://a.co/d/baRzank](https://a.co/d/baRzank)
 
-After writing this, I was inspired to further explore the applicability of other architecture patterns to Django.
-
-That ended up becoming my first book!
-
-**Django Architecture Patterns** is available at: [https://a.co/d/baRzank](https://a.co/d/baRzank)
-
-
-## Intro
 
 [Cosmic Python](https://www.cosmicpython.com/) (aka Architecture Patterns With Python) is a very interesting book with great concepts. Though reading it as a Django fan, I kept thinking how all that would apply to Django. So [I implemented](https://github.com/brunodantas/cosmic-django) the example project while reflecting on best practices and referencing other sources.
 
