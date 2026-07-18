@@ -6,17 +6,16 @@ plugins:
 
 # Site settings
 title: brunodantas
+author: Bruno Dantas
 description: >- # this means to ignore newlines until "baseurl:"
   Software engineering and related things.
 url: "https://brunodantas.github.io" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog
-github_username: brunodantas
-linkedin_username: brunodantasm
 
 # SEO settings
 lang: en_US
 timezone: America/Sao_Paulo # Change to your timezone
-google_analytics: G-6PWGXCY41R # Add your Google Analytics ID here when you get one
+google_analytics: G-6PWGXCY41R
 google_site_verification: googlec39f095078cc50f8 # Add your Google Search Console verification code
 
 # Social media and Open Graph defaults
@@ -45,7 +44,6 @@ minima:
   social_links:
     github: brunodantas
     linkedin: brunodantasm
-  google_analytics: G-6PWGXCY41R
 
 # Custom navigation - only show these pages in header
 header_pages:
@@ -55,16 +53,6 @@ header_pages:
 # Show excerpts on home page
 show_excerpts: true
 
-# Collections
-collections:
-  posts:
-    output: true
-    permalink: /blog/:year/:month/:day/:title/
-
-# Pagination
-paginate: 5
-paginate_path: "/blog/page:num/"
-
 # Defaults
 defaults:
   - scope:
@@ -72,7 +60,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      show_excerpts: true
   - scope:
       path: ""
     values:
