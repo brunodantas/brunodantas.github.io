@@ -8,6 +8,7 @@ redirect_from:
 categories: [algorithms, python, benchmark, computer science]
 tags: [algorithms, python, benchmark, computer science]
 author: brunodantas
+image: /assets/images/og/counting-sort.png
 seo:
   type: BlogPosting
 ---

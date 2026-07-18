@@ -8,7 +8,7 @@ redirect_from:
 categories: [django, python, architecture]
 tags: [cosmic-python, domain-driven-design, tdd, django, clean-architecture, software-engineering]
 author: brunodantas
-image: /assets/images/cosmic.png
+image: /assets/images/og/cosmic-django.png
 seo:
   type: BlogPosting
 ---

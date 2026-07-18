@@ -7,7 +7,7 @@ redirect_from:
 categories: [performance-engineering, backend-development]
 tags: [software-engineering, performance]
 author: brunodantas
-# image: /assets/images/cosmic.png
+image: /assets/images/og/mature-optimization.png
 seo:
   type: BlogPosting
 ---
