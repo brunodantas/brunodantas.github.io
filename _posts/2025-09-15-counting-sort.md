@@ -22,7 +22,7 @@ Today we are going to focus on [Counting Sort](https://en.wikipedia.org/wiki/Cou
 
 If you studied Computer Science, you may remember that there are some algorithms that trade memory-efficiency for time-efficiency (see: [memoization](https://en.wikipedia.org/wiki/Memoization)). That's similar to what Distribution Sorts do. For instance, Counting Sort uses a big array to store every element, in addition to an output array, in case you're not sorting in-place.
 
-The catch is: Counting Sort and others only work for **arrays of non-negative integers**. So, if you can map your objects clealy into non-negative integers beforehand, it should work. Given that restriction the complexity of Counting Sort is as follows.
+The catch is: Counting Sort and others only work for **arrays of non-negative integers**. So, if you can map your objects clearly into non-negative integers beforehand, it should work. Given that restriction the complexity of Counting Sort is as follows.
 - Time: O(n + k)
 - Space: O(n + k)
 
@@ -30,7 +30,7 @@ Where n is the length of the array, and k is the maximum element of the array.
 
 ## Counting Sort
 
-The basic idea is that you allocate a big array with size k (or list in our case) where each index i represents the values from the input array, and each stored value v represents the number of occurences of each element. After we populate this array, we just need to iterate it and populate our output array with each element i times its occurrences v.
+The basic idea is that you allocate a big array with size k (or list in our case) where each index i represents the values from the input array, and each stored value v represents the number of occurrences of each element. After we populate this array, we just need to iterate it and populate our output array with each element i times its occurrences v.
 
 My implementation of Counting Sort is defined as follows.
 
@@ -71,13 +71,13 @@ Let's go through this algorithm and analyze its performance in various situation
 
 ## Analysis
 
-The memory usage of this program can be determined from verifying that the `occurs` list has size v where v is the largest element in the input, and that the output list has size `n`, size it has the same size as the input.
+The memory usage of this program can be determined from verifying that the `occurs` list has size k where k is the largest element in the input, and that the output list has size `n`, since it has the same size as the input.
 
 The time complexity isn't as straightforward to analyze because we're using Python's efficient list multiplication. Let's assume that appending occurrences in the last loop takes constant time.
 
 We can see that computing the max value is an iteration over n elements, while counting occurrences takes k iterations, and building the output takes k iterations as well, resulting in 2k + n.
 
-As we can see, this algorithm is insensitive to factors such the sorted input, likely because it doesn't make any comparison.
+As we can see, this algorithm is insensitive to factors such as the sorted input, likely because it doesn't make any comparison.
 
 So, the best case for it is where the largest value is not too high, i.e. the lower k is, the more this algorithm approximates linear time/space.
 
@@ -325,7 +325,7 @@ Size     CountingSort    sorted()        CS_Mem     Sort_Mem   Speedup    Winner
 16777216 2.14s           1.56s           288.8MB    191.8MB    0.73x      sorted()
 </pre>
 
-As we can see, Rust CS dominated the results up to range 300, reaching close to 6.2X Speedup. At higher ranges, this version of CS lose performance due to memory access overhead, perhaps. Interestingly, its the memory usage is comparable to `sorted`'s, but growing faster as the range of elements grow.
+As we can see, Rust CS dominated the results up to range 300, reaching close to 6.2X Speedup. At higher ranges, this version of CS loses performance due to memory access overhead, perhaps. Interestingly, its memory usage is comparable to `sorted`'s, but growing faster as the range of elements grow.
 
 # Conclusion
 

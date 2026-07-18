@@ -16,7 +16,7 @@ After writing this, I was inspired to further explore the applicability of other
 
 [Cosmic Python](https://www.cosmicpython.com/) (aka Architecture Patterns With Python) is a very interesting book with great concepts. Though reading it as a Django fan, I kept thinking how all that would apply to Django. So [I implemented](https://github.com/brunodantas/cosmic-django) the example project while reflecting on best practices and referencing other sources.
 
-If you look at their Django implementation in Appedix D, the authors do something weird with the project structure. It's like they think Django is an ORM as opposed to a web framework with batteries included... They totally threw the batteries away and did their own thing, and that's the opposite of what I want to do.
+If you look at their Django implementation in Appendix D, the authors do something weird with the project structure. It's like they think Django is an ORM as opposed to a web framework with batteries included... They totally threw the batteries away and did their own thing, and that's the opposite of what I want to do.
 
 In this post, we'll go over each of the book's architecture patterns and discuss their applicability to Django projects. Then I'll describe my [Cosmic Django](https://github.com/brunodantas/cosmic-django) project and all the patterns I decided on using.
 
@@ -38,7 +38,7 @@ One of my goals with this project is making all tests pass. This seems challengi
 
 > This is the part of your code that is closest to the business, the most likely to change, and the place where you deliver the most value to the business. Make it easy to understand and modify.
 
-That's an interest concept. If you've read the book, you know that they put this model stuff away from the ORM/DB, interestingly. It sure feels like throwing the baby out with the bathwater in the case of Django. They [kinda admit it](https://www.cosmicpython.com/book/appendix_django.html#_why_was_this_all_so_hard) by basically saying Django is just for simple CRUD apps. Which feels wrong. I wonder if they mean that Django practices are too coupled and messy for larger projects. I suppose they can be, but they don't *have* to be.
+That's an interesting concept. If you've read the book, you know that they put this model stuff away from the ORM/DB, interestingly. It sure feels like throwing the baby out with the bathwater in the case of Django. They [kinda admit it](https://www.cosmicpython.com/book/appendix_django.html#_why_was_this_all_so_hard) by basically saying Django is just for simple CRUD apps. Which feels wrong. I wonder if they mean that Django practices are too coupled and messy for larger projects. I suppose they can be, but they don't *have* to be.
 
 All that makes me want to skip on separate domain models and use the ORM models like everyone does. But I have to say, it actually feels like a compelling idea to have another separation layer between the domain and the infrastructure. Because doing both on the Django `models.py` feels like those things are coupled, the model is doing too many things, and the model code becomes a mix of business logic and DB operations and whatnot. And I'd say one of the things I find most interesting about the book is how much it emphasizes the principle of [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns).
 
@@ -111,7 +111,7 @@ Personally, I'd rather apply [Design by Contract](https://en.wikipedia.org/wiki/
 
 Unless I'm missing something, this is another included battery of Django: [Signals](https://docs.djangoproject.com/en/5.2/topics/signals/). Some say you should avoid them like the plague due to maintenance concerns, and it's a powerful way of decoupling things. Just be careful and try to implement good monitoring on them.
 
-Following the conventions of this chapter, the Message Bus will be the Signals. Our UoW i.e. Managers would publish events, which will be received by the Domain (`logic` module) and by Handlers (`signal_receivers`). On the first iteration at least, because things quite a bit afterwards.
+Following the conventions of this chapter, the Message Bus will be the Signals. Our UoW i.e. Managers would publish events, which will be received by the Domain (`logic` module) and by Handlers (`signal_receivers`). On the first iteration at least, because things change quite a bit afterwards.
 
 ## Event-Driven Architecture
 
@@ -131,7 +131,7 @@ This is about events that return values. Django Signals can do that too.
 
 Seems like a great idea. Skipping this because I don't want to deal with microservices in this project.
 
-Let's say I chose the [Majestic Monolith](https://signalvnoise.com/svn3/the-majestic-monolith/) and that we don't a team big enough to do microservices.
+Let's say I chose the [Majestic Monolith](https://signalvnoise.com/svn3/the-majestic-monolith/) and that we don't have a team big enough to do microservices.
 
 > My First Law of Distributed Object Design: Don't distribute your objects  
 https://martinfowler.com/bliki/FirstLaw.html
@@ -203,5 +203,5 @@ The missing modules from the graph are:
 
 In this post, we went through all the architecture patterns from the Cosmic Python book and how they can be applied to Django. We discussed their applicability, especially when they clashed with Django best practices, and made a few compromises where needed. We also found that some of the patterns were part of the framework already.
 
-In the end, I believe we have reached an implementation that is both a middle ground between the book's patterns and Django best practices, and a better use of Django when compared to the book's Django implementation from Appedix D.
+In the end, I believe we have reached an implementation that is both a middle ground between the book's patterns and Django best practices, and a better use of Django when compared to the book's Django implementation from Appendix D.
 
