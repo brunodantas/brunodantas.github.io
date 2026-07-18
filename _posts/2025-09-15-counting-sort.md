@@ -3,6 +3,8 @@ layout: post
 title: "Counting Sort Performance in Python"
 description: "How Counting Sort can beat Python's built-in Powersort in specific scenarios: O(n+k) complexity, implementation details, and benchmark results."
 date: 2025-09-15
+redirect_from:
+  - /blog/2025/09/15/counting-sort/
 categories: [algorithms, python, benchmark, computer science]
 tags: [algorithms, python, benchmark, computer science]
 author: brunodantas

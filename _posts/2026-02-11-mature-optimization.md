@@ -2,6 +2,8 @@
 title: "Defining Mature Optimization"
 description: "This is a short excerpt from the book Django QuerySet Performance, which aims at a positive definition for performance enhancement, in contrast to Knuth's famous quote."
 date: 2026-02-11
+redirect_from:
+  - /blog/2026/02/11/mature-optimization/
 categories: [performance-engineering, backend-development]
 tags: [software-engineering, performance]
 author: brunodantas
