@@ -60,6 +60,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      image: /assets/images/konario.jpg # fallback OG image when a post sets none
   - scope:
       path: ""
     values:

@@ -327,6 +327,6 @@ Size     CountingSort    sorted()        CS_Mem     Sort_Mem   Speedup    Winner
 
 As we can see, Rust CS dominated the results up to range 300, reaching close to 6.2X Speedup. At higher ranges, this version of CS loses performance due to memory access overhead, perhaps. Interestingly, its memory usage is comparable to `sorted`'s, but growing faster as the range of elements grow.
 
-# Conclusion
+## Conclusion
 
 In this post, we have seen an analysis and benchmark of Counting Sort. I hope it was informative. My hope was that we could leave this with clearer use cases for this algorithm, but what remains is the conventional wisdom of using it when your maximum element is not large.
