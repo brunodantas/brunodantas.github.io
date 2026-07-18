@@ -4,3 +4,4 @@ gem "github-pages", group: :jekyll_plugins
 gem "minima"
 gem "jekyll-seo-tag"
 gem "jekyll-redirect-from"
+gem "html-proofer", group: :test
