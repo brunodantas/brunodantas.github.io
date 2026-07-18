@@ -2,6 +2,7 @@
 layout: page
 title: "Books"
 permalink: /books/
+image: /assets/images/og/books.png
 ---
 
 I write about software architecture and performance, mostly through the lens of Django and Python.
