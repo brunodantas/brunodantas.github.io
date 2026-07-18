@@ -6,7 +6,7 @@ permalink: /about/
 
 I'm a software engineer interested in Python, Functional Programming, problem solving.
 
-I created this website site to share what I've learned.
+I created this site to share what I've learned.
 
 ## Connect
 
