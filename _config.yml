@@ -16,7 +16,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 # SEO settings
 lang: en_US
 timezone: America/Sao_Paulo # Change to your timezone
-google_analytics: G-6PWGXCY41R
 google_site_verification: googlec39f095078cc50f8 # Add your Google Search Console verification code
 
 # Social media and Open Graph defaults
