@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Counting Sort Performance in Python"
-description: "Explore how Counting Sort, a distribution-based algorithm, can outperform Python's built-in Powersort in specific scenarios. Learn about O(n+k) complexity, implementation details, and benchmark results comparing counting sort against Python's sorted() function."
+description: "How Counting Sort can beat Python's built-in Powersort in specific scenarios: O(n+k) complexity, implementation details, and benchmark results."
 date: 2025-09-15
 categories: [algorithms, python, benchmark, computer science]
 tags: [algorithms, python, benchmark, computer science]
