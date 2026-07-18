@@ -29,3 +29,6 @@ bundle exec jekyll serve
 - GitHub: [@brunodantas](https://github.com/brunodantas)
 - LinkedIn: [brunodantasm](https://linkedin.com/in/brunodantasm)
 
+## 📄 License
+Post content is licensed under [CC BY 4.0](LICENSE).
+
