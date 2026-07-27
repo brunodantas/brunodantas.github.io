@@ -1,6 +1,6 @@
 ---
 title: "Personal AI Alignment"
-description: "You can't retrain the model, but you own the harness around it: standing instructions, memory, skills, and guardrails that align AI to how you work."
+description: "Why AI assistants keep missing what you want, and the fix anyone can apply: a harness of instructions, memory, skills, and guardrails that makes the agent yours."
 date: 2026-07-27
 categories: [ai, llm, workflow]
 tags: [ai-alignment, llm, context-engineering, agent-harness, claude-code, productivity]
