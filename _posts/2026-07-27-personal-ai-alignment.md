@@ -1,10 +1,11 @@
 ---
 title: "Personal AI Alignment"
-description: "You can't retrain the model, but you own the harness around it. No code, no training, no API: practical ways any AI user can align an assistant to how they actually work, and stop re-explaining themselves every session."
+description: "You can't retrain the model, but you own the harness around it: standing instructions, memory, skills, and guardrails that align AI to how you work."
 date: 2026-07-27
 categories: [ai, llm, workflow]
 tags: [ai-alignment, llm, context-engineering, agent-harness, claude-code, productivity]
 author: brunodantas
+image: /assets/images/og/personal-ai-alignment.png
 seo:
   type: BlogPosting
 ---
