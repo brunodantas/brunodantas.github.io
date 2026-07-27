@@ -10,6 +10,8 @@ seo:
   type: BlogPosting
 ---
 
+> Este post também está disponível [em português](/blog/alinhamento-da-ia-pessoal/).
+
 Anyone who has used any of the AI assistants enough eventually notices that their actions sometimes just don't match with our will. We think that AI just isn't there yet. It can feel really dumb sometimes.
 
 Talking to people about their use cases, their problems include:
@@ -23,7 +25,7 @@ In this post, we'll see some approaches that can help us move towards a smaller 
 
 This is aimed at most kinds of AI users, rather than only technical people.
 
-## Context
+## Motivation
 
 In the past year, as I explored more deeply the current capabilities of AI assistants, I noticed that I started getting less and less frustrated with AI behavior. That motivated the writing of this post, since I believe a lot of the knowledge of modern practices in the field hasn't reached mainstream yet.
  
