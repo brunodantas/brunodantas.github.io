@@ -23,9 +23,11 @@ In this post, we'll see some approaches that can help us move towards a smaller 
 
 This is aimed at most kinds of AI users, rather than only technical people.
 
-> For some context: in the past year, as I explored more deeply the current capabilities of AI assistants, I noticed that I started getting less and less frustrated with AI behavior. That motivated the writing of this post, since I believe a lot of the knowledge of modern practices in the field hasn't reached mainstream yet.
-> 
-> Also note: I'm biased towards software engineering concepts. However, I believe that the concepts in this post can be used in different contexts as well, as I have been using with success.
+## Context
+
+In the past year, as I explored more deeply the current capabilities of AI assistants, I noticed that I started getting less and less frustrated with AI behavior. That motivated the writing of this post, since I believe a lot of the knowledge of modern practices in the field hasn't reached mainstream yet.
+ 
+Also note: I'm biased towards software engineering concepts. However, I believe that the concepts in this post can be used in different contexts as well, as I have been using with success.
 
 ## Framing
 
