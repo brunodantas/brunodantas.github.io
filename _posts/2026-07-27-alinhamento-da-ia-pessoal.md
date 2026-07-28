@@ -11,7 +11,7 @@ seo:
   type: BlogPosting
 ---
 
-> Este post também está disponível [em inglês](/blog/personal-ai-alignment/).
+> This post is also available [in English](/blog/personal-ai-alignment/).
 
 Qualquer pessoa que já usou assistentes de IA o suficiente eventualmente percebe que as ações deles às vezes simplesmente não batem com a nossa vontade. A gente pensa que a IA ainda não chegou onde devia. Às vezes ela parece bem burra.
 
